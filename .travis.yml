@@ -1,5 +1,5 @@
+os: linux
 dist: bionic
-sudo: required
 before_install:
 - localedef -i en_US -f UTF-8 en_US.UTF-8
 - sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys D6BC243565B2087BC3F897C9277A7293F59E4889
@@ -15,7 +15,6 @@ deploy:
   api_key:
     secure: XBZYz8oR5Wh0Ryzj6azZ/okAyYHhRVT9kUgS85sdutz4A7WHV/q7uOIpkpoAyr/RphxlEqiZt3+mV4Ew6sRpVTL/wp/0N6Hq/MXRBg4ApO25sxGDTac4+ZgbvPXBRrXFkIy+m8A1ie+NHgV2FshSoR6hmfVFbj3ulp7m9BAtO8ViG3jddmsGfDodvsYD0nSpA3qeqRP8kXyWc8kI0YDpor7smlNI08gX8hQOWiY7rllQPv+vZX661m/xTWz+1EuwGwPAQrBzlVgZdTmIiy9ChrV1sz4cyw7tCXXN3y706aq+kDPTySQ9zxofqYxW7mFk2gNR59jrFImU+NbMXXWF/XgKDFEStzRihVnVzMGSDjVoGsGWUTUTtzoiY5SZIy6IWAA/RVtM7UcG7+hsfjC6tzvtt1ABJ67yapX/sUBrgC6iymfBP02zBNm9yCfkM+xee2+miDJ1LKrX+k7FkQ3NIVRpX9hNkF6mwf+S1IHF2AMHvKU48EDP5eMLQiqvtA/D+0NfkrH+MACdvriNP77LsVkGyX1i6usnqp7xGOtWjQZ+lbaKs+of48rOVG6VGG+xPGmp7sN34NIyrecnV7B1B8zbEwuX5GFE4X6rIiCoDCi1h2QjLy6UobQChqfIT9XosfBkY8M5lvmUyz7kQACjRXj6NxVz6iN77tK9ejMlWpk=
   file: caleb_resume.pdf
-  skip_cleanup: 'true'
   on:
     repo: chwerth/LaTeX_Resume
     tags: true
