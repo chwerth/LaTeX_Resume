@@ -10,8 +10,8 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: caleb_resume.tex
-      - name: Upload PDF file
-        uses: actions/upload-artifact@v4
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        if: startsWith(github.ref, 'refs/tags/')
         with:
-          name: PDF
-          path: caleb_resume.pdf
+          files: caleb_resume.pdf
