@@ -44,13 +44,20 @@
 }
 
 \NewDocumentCommand{\cvsubsection}{m o o o}{%
-%   \vspace{\parskip}%
+  % \vspace{\parskip}%
   \needspace{4\baselineskip}%
   \textbf{\large#1}%
   \IfValueT{#2}{\hfill\textbf{\large#2}}%
   \IfValueT{#3}{\IfValueT{#4}{\\}}%
   \IfValueT{#3}{\emph{\large#3}}%
   \IfValueT{#4}{\hfill\emph{\large#4}}
+  \par\vspace{-\parskip}
+}
+
+\NewDocumentCommand{\cvsubsubsection}{m m}{%
+  \needspace{4\baselineskip}%
+  \emph{\large#1}%
+  \hfill\emph{\large#2}
   \par\vspace{-\parskip}
 }
 
