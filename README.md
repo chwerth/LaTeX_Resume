@@ -4,7 +4,7 @@ My resume, but written in LaTeX instead of Word!
 
 ### PDF Output
 
-The PDF output of `caleb_resume.tex` can be found in the [releases](https://github.com/chwerth/LaTeX_Resume/releases). I use [travis-ci](https://travis-ci.com/) to automatically build and release new versions of my resume when I push tags to this repository.
+The PDF output of `caleb_resume.tex` can be found in the [releases](https://github.com/chwerth/LaTeX_Resume/releases). I use GitHub Actions to automatically build and release new versions of my resume when I push tags to this repository.
 
 ### Credits
 
