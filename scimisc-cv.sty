@@ -1,15 +1,15 @@
 % Quickly hacked together from .docx sample provided by Scimisc
 \RequirePackage{ifpdf,ifxetex,ifluatex}
 \ifpdf
-  \RequirePackage{cmap}
-  \RequirePackage[utf8]{inputenc}
-  \RequirePackage[T1]{fontenc}
-  \input{glyphtounicode}
-  \pdfglyphtounicode{f_f}{FB00}
-  \pdfglyphtounicode{f_f_i}{FB03}
-  \pdfglyphtounicode{f_f_l}{FB04}
-  \pdfglyphtounicode{f_i}{FB01}
-  \pdfgentounicode=1
+	\RequirePackage{cmap}
+	\RequirePackage[utf8]{inputenc}
+	\RequirePackage[T1]{fontenc}
+	\input{glyphtounicode}
+	\pdfglyphtounicode{f_f}{FB00}
+	\pdfglyphtounicode{f_f_i}{FB03}
+	\pdfglyphtounicode{f_f_l}{FB04}
+	\pdfglyphtounicode{f_i}{FB01}
+	\pdfgentounicode=1
 \fi
 
 \RequirePackage{caladea}
@@ -24,6 +24,11 @@
 \RequirePackage{needspace}
 \RequirePackage[compact,small,explicit]{titlesec}
 
+% A few additional packages I added
+\RequirePackage{hyperref}
+\RequirePackage{xcolor}
+\RequirePackage{multicol}
+
 \def\scimisc@cvname{}
 \def\scimisc@cvpersonalinfo{}
 \def\cvinfosep{\hfill|\hfill{}}
@@ -36,35 +41,51 @@
 \newcommand{\cvpersonalinfofont}{\normalsize}
 
 \newcommand{\makecvtitle}{%
-  \begin{center}
-      {\cvnamefont\MakeTextUppercase{\scimisc@cvname}\par}
-      \vskip4pt\hrule height 0.6pt \relax
-      {\cvpersonalinfofont\scimisc@cvpersonalinfo\par}
-  \end{center}\medskip
+	\begin{center}
+		{\cvnamefont\MakeTextUppercase{\scimisc@cvname}\par}
+		\vskip4pt\hrule height 0.6pt \relax
+		{\cvpersonalinfofont\scimisc@cvpersonalinfo\par}
+	\end{center}\medskip
 }
 
 \NewDocumentCommand{\cvsubsection}{m o o o}{%
   % \vspace{\parskip}%
-  \needspace{4\baselineskip}%
-  \textbf{\large#1}%
-  \IfValueT{#2}{\hfill\textbf{\large#2}}%
-  \IfValueT{#3}{\IfValueT{#4}{\\}}%
-  \IfValueT{#3}{\emph{\large#3}}%
-  \IfValueT{#4}{\hfill\emph{\large#4}}
-  \par\vspace{-\parskip}
-}
+	\needspace{4\baselineskip}%
+	\textbf{\large#1}%
+	\IfValueT{#2}{\hfill\textbf{\large#2}}%
+	\IfValueT{#3}{\IfValueT{#4}{\\}}%
+	\IfValueT{#3}{\emph{\large#3}}%
+	\IfValueT{#4}{\hfill\emph{\large#4}}%
+	\par\vspace{-\parskip}%
+}%
 
+% This is for if you would like to differentiate between
+% different roles at the same company
 \NewDocumentCommand{\cvsubsubsection}{m m}{%
-  \needspace{4\baselineskip}%
-  \emph{\large#1}%
-  \hfill\emph{\large#2}
-  \par\vspace{-\parskip}
-}
+	\needspace{4\baselineskip}%
+	\emph{\large#1}%
+	\hfill\emph{\large#2}%
+	\par\vspace{-\parskip}%
+}%
 
+% Usage: either turn link text into a hyperlink or turn keyword into hyperlink
+% \link{https://www.google.com/}
+% \link[Google]{https://www.google.com/}
+\NewDocumentCommand{\link}{o m}{%
+	\IfNoValueTF{#1}%
+		{\href{#2}{\color{blue}#2}}%
+		{\href{#2}{\color{blue}#1}}%
+}%
+
+% Use this line to customize margins
 \geometry{letterpaper, top=0.4in, bottom=0.4in, left=0.4in, right=0.4in}
+
 \titleformat{\section}
-  {\bfseries\rmfamily\large}{\thesection}{0pt}{\MakeTextUppercase{#1}}[{\titlerule[0.6pt]}]
+{\bfseries\rmfamily\large}{\thesection}{0pt}{\MakeTextUppercase{#1}}[{\titlerule[0.6pt]}]
+
+% List customization
 \setlist{leftmargin=*,nosep}
+\setlist[itemize, 2]{label=\textopenbullet}
 
 \pagestyle{empty}
 \setcounter{secnumdepth}{0}

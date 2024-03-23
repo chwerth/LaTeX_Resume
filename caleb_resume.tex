@@ -1,18 +1,12 @@
 \documentclass[hidelinks, 11pt]{article}
 \usepackage{scimisc-cv}
-\usepackage{hyperref}
-\usepackage{xcolor}
-\usepackage{multicol}
-\usepackage[a-2u]{pdfx}
-\newcommand{\link}[1]{{\color{blue}\href{#1}{#1}}}
-\setlist[itemize, 2]{label=\textopenbullet}
 
 %% These are custom commands defined in scimisc-cv.sty
 \cvname{Caleb Werth}
 \cvpersonalinfo{
-  256--655--8135 |
-  caleb.werth@gmail.com |
-  \link{https://linkedin.com/in/chwerth/}
+	256--655--8135 |
+	caleb.werth@gmail.com |
+	\link{https://linkedin.com/in/chwerth/}
 }
 
 \begin{document}
@@ -23,29 +17,29 @@
 \section{Skills/Capabilities/Expertise}
 
 \begin{description}[widest=Programming Langauges:]
-  \item[Programming Languages\normalfont:] Python, C, C++, Bash, MATLAB, CMake, HTML, CSS, JavaScript, SQL, XML, UML
-  \item[Certifications\normalfont:] Certified Scrum Master (\href{https://bcert.me/sqcdwlemz}{\color{blue}CSM}), Certified Scrum Product Owner (\href{https://bcert.me/smphouhlt}{\color{blue}CSPO}), CompTIA \href{https://www.credly.com/badges/9177a9b8-29d9-4896-95cc-f448e908ddb7}{\color{blue}Project+}
-  \item[Soft Skills\normalfont:] Public Speaking, Writing, Project Management, Leadership, Scrum, Agile
-  \item[Tools\normalfont:] Cameo Systems Modeler, Linux, Vim, Git, Jira, Jenkins, Google Test, Visual Studio, Flutter, \href{https://github.com/chwerth/LaTeX\_Resume}{\color{blue}LaTeX}
+	\item[Programming Languages\normalfont:] Python, C, C++, Bash, MATLAB, CMake, HTML, CSS, JavaScript, SQL, XML, UML
+	\item[Certifications\normalfont:] Certified Scrum Master (\link[CSM]{https://bcert.me/sqcdwlemz}), Certified Scrum Product Owner (\link[CSPO]{https://bcert.me/smphouhlt}), CompTIA \link[Project+]{https://www.credly.com/badges/9177a9b8-29d9-4896-95cc-f448e908ddb7}
+	\item[Soft Skills\normalfont:] Public Speaking, Writing, Project Management, Leadership, Scrum, Agile
+	\item[Tools\normalfont:] Cameo Systems Modeler, Linux, Vim, Git, Jira, Jenkins, Google Test, Visual Studio, Flutter, \link[LaTeX]{https://github.com/chwerth/LaTeX\_Resume}
 \end{description}
 
 \section{Education}
 \vspace{-1.4mm}
 \begin{multicols}{2}
 
-  \begin{minipage}{0.5\textwidth}
-    \textbf{The University of Alabama}, Tuscaloosa, AL \newline
-    Master of Business Administration, December 2022 \newline
-    Focus Area: Supply Chain and Operations Management \newline
-    GPA: 3.88 / 4.00
-  \end{minipage}
+	\begin{minipage}{0.5\textwidth}
+		\textbf{The University of Alabama}, Tuscaloosa, AL \newline
+		Master of Business Administration, December 2022 \newline
+		Focus Area: Supply Chain and Operations Management \newline
+		GPA: 3.88 / 4.00
+	\end{minipage}
 
-  \begin{minipage}{0.5\textwidth}
-    \textbf{The University of Alabama}, Tuscaloosa, AL \newline
-    Bachelor of Science in Computer Science, December 2020 \newline
-    Minor: Mathematics \newline
-    GPA: 4.00 / 4.00
-  \end{minipage}
+	\begin{minipage}{0.5\textwidth}
+		\textbf{The University of Alabama}, Tuscaloosa, AL \newline
+		Bachelor of Science in Computer Science, December 2020 \newline
+		Minor: Mathematics \newline
+		GPA: 4.00 / 4.00
+	\end{minipage}
 
 \end{multicols}
 
@@ -54,13 +48,13 @@
 \cvsubsection{Sus Highlight\normalfont{, \textit{Front-end Developer}}}[October 2020]
 
 \begin{itemize}
-  \item Developed web application that uses machine learning to scan TOS agreements: \link{https://devpost.com/software/sus-highlight}
+	\item Developed web application that uses machine learning to scan TOS agreements: \link{https://devpost.com/software/sus-highlight}
 \end{itemize}
 
 \cvsubsection{Rastral Rampart\normalfont{, \textit{Project Lead}}}[May 2020]
 
 \begin{itemize}
-  \item Created arcade-style space game using Python: \link{https://github.com/chwerth/RAstral\_Rampart}
+	\item Created arcade-style space game using Python: \link{https://github.com/chwerth/RAstral\_Rampart}
 \end{itemize}
 
 \section{Work Experience}
@@ -69,49 +63,49 @@
 [Software Engineer][March 2023 -- Present]
 
 \begin{itemize}
-  \item Created tool in Python that used RegEx to search C++ codebase for compatibility issues and autogenerate Excel report
-  \item Authored Bash script to produce timing report for different system test cases of C++ program run in GitLab pipeline
-  \item Used Cameo Systems Modeler to create UML activity diagrams of software behavior as part of overall MBSE effort
-  \item Produced and gave live training to multiple teams on unit testing in Google Test
+	\item Created tool in Python that used RegEx to search C++ codebase for compatibility issues and autogenerate Excel report
+	\item Authored Bash script to produce timing report for different system test cases of C++ program run in GitLab pipeline
+	\item Used Cameo Systems Modeler to create UML activity diagrams of software behavior as part of overall MBSE effort
+	\item Produced and gave live training to multiple teams on unit testing in Google Test
 \end{itemize}
 
 \cvsubsection{Dynetics, Inc}[Huntsville, AL]
 [Computer Analyst III][January 2021 -- March 2023]
 
 \begin{itemize}
-  \item Supported initial development of UDP network interface for communication with our models in simulation framework
-  \item Performed analysis on model and generated documentation on findings at request of customer
-  \item Wrote and managed CI/CD pipelines in Jenkins to automatically test multiple C++ projects
-  \item Provided training to department on basics of automated testing in Jenkins
-  \item Co-authored automated delivery pipeline to generate change logs and prepare repositories for customers
-  \item Supported developers with algorithm optimization strategies, in one case cutting an algorithm's runtime to 20\% of original
-  \item Implemented features and fixed bugs for MATLAB GUI application; often spoke to customer and implemented feedback
-  \item Provided support on design decisions, project flow, and Python implementation of verification and validation suite
+	\item Supported initial development of UDP network interface for communication with our models in simulation framework
+	\item Performed analysis on model and generated documentation on findings at request of customer
+	\item Wrote and managed CI/CD pipelines in Jenkins to automatically test multiple C++ projects
+	\item Provided training to department on basics of automated testing in Jenkins
+	\item Co-authored automated delivery pipeline to generate change logs and prepare repositories for customers
+	\item Supported developers with algorithm optimization strategies, in one case cutting an algorithm's runtime to 20\% of original
+	\item Implemented features and fixed bugs for MATLAB GUI application; often spoke to customer and implemented feedback
+	\item Provided support on design decisions, project flow, and Python implementation of verification and validation suite
 \end{itemize}
 
 \cvsubsubsection{Software Engineering Intern}{May 2020 -- August 2020}
 
 \begin{itemize}
-  \item Led overhaul of automated testing infrastructure to enable consistent testing of MATLAB model behavior
-  \item Introduced new C++ unit testing framework to improve verification and validation processes
-  \item Prototyped automated documentation generation using Jenkins, Python, and LaTeX
+	\item Led overhaul of automated testing infrastructure to enable consistent testing of MATLAB model behavior
+	\item Introduced new C++ unit testing framework to improve verification and validation processes
+	\item Prototyped automated documentation generation using Jenkins, Python, and LaTeX
 \end{itemize}
 
 \cvsubsection{ADTRAN}[Huntsville, AL]
 [Software Engineering Intern][January 2019 -- May 2019, August 2019 -- December 2019]
 
 \begin{itemize}
-  \item Fixed bugs in network orchestration and management platform written in Angular and Scala
-  \item Authored and contributed to corporate Python packages that enabled better development processes
-  \item Led team to win \textit{Best Co-op Project} in hackathon by writing auto-revert tool in Jenkins
+	\item Fixed bugs in network orchestration and management platform written in Angular and Scala
+	\item Authored and contributed to corporate Python packages that enabled better development processes
+	\item Led team to win \textit{Best Co-op Project} in hackathon by writing auto-revert tool in Jenkins
 \end{itemize}
 
 \section{Honors/Leadership/Activities}
 
 \begin{itemize}
-  \item Awarded Eagle Scout Rank, led team to construct raised beds for CASA Community Garden \hfill December 2015
-  \item UA in India: Reverse Innovation in India program \hfill July 2018
-  \item University of Alabama -- President's List (5), Dean's List (2)
+	\item Awarded Eagle Scout Rank, led team to construct raised beds for CASA Community Garden \hfill December 2015
+	\item UA in India: Reverse Innovation in India program \hfill July 2018
+	\item University of Alabama -- President's List (5), Dean's List (2)
 \end{itemize}
 
 
